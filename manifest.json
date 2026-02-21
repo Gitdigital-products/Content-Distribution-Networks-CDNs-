@@ -1,0 +1,10 @@
+{
+  "name": "GitDigital CDN",
+  "version": "1.0.0",
+  "base_url": "https://cdn.gitdigital.products/",
+  "assets": {
+    "logo_primary": "assets/branding/logo-main.png",
+    "kyc_sdk": "scripts/sdk/solana-kyc-v1.js",
+    "theme_css": "styles/global-v1.css"
+  }
+}
