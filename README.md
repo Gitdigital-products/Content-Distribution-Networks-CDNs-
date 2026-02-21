@@ -1,3 +1,14 @@
+# 🌐 GitDigital Content Delivery Network (CDN)
+
+![License](https://img.shields.io/github/license/Gitdigital-products/Content-Distribution-Networks-CDNs-?color=blue)
+![Build Status](https://img.shields.io/github/actions/workflow/status/Gitdigital-products/Content-Distribution-Networks-CDNs-/cdn-deploy.yml?branch=main&label=deployment)
+![Last Commit](https://img.shields.io/github/last-commit/Gitdigital-products/Content-Distribution-Networks-CDNs-)
+![Repo Size](https://img.shields.io/github/repo-size/Gitdigital-products/Content-Distribution-Networks-CDNs-)
+![Security](https://img.shields.io/badge/security-vetted-success)
+
+> **High-availability asset distribution for the GitDigital Fintech Ecosystem.**
+---
+
 This is the final polish. Batch 3 focuses on Developer Experience (DX) and Structure. These files turn a "folder of images" into a professional resource that other developers can actually understand and use without asking you questions.
 Batch 3: Developer Experience (DX) & Governance
 8. README.md (The "Front Door")
