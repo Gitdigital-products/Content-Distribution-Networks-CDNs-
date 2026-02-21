@@ -1,0 +1,15 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node modules (Only needed for local optimization)
+node_modules/
+npm-debug.log*
+
+# Local environment secrets
+.env
+.env.local
+
+# Build artifacts
+dist/
+build/
