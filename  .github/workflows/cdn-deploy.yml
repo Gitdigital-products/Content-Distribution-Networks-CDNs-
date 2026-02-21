@@ -1,0 +1,33 @@
+name: Optimize and Deploy CDN Assets
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'assets/**'
+      - 'scripts/**'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Optimize Images (WebP/AVIF)
+        uses: calibreapp/image-actions@main
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          compressOnly: true
+
+      - name: Minify JavaScript/CSS
+        run: |
+          npm install -g terser clean-css-cli
+          find scripts/ -name "*.js" -exec terser {} -o {} \;
+          find styles/ -name "*.css" -exec cleancss -o {} {} \;
+
+      - name: Purge Cloudflare Cache (Optional)
+        run: |
+          curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CF_ZONE_ID }}/purge_cache" \
+          -H "Authorization: Bearer ${{ secrets.CF_API_TOKEN }}" \
+          -H "Content-Type: application/json" \
+          --data '{"purge_everything":true}'
