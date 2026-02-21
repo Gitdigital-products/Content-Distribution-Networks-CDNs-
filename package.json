@@ -1,0 +1,15 @@
+{
+  "name": "gitdigital-cdn-infrastructure",
+  "version": "1.0.0",
+  "description": "Asset optimization and distribution for GitDigital Products",
+  "scripts": {
+    "optimize": "node scripts/optimize-images.js",
+    "lint": "prettier --write .",
+    "validate": "jsonlint manifest.json"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.0",
+    "sharp": "^0.32.0",
+    "jsonlint": "^1.6.3"
+  }
+}
